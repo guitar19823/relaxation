@@ -1,7 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-shadow: border-box;
+	-webkit-box-shadow: border-box;
+	        box-shadow: border-box;
 }
 
 .orange {
@@ -30,9 +31,15 @@ body {
 
 header {
 	height: 120px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .logo img {
@@ -149,12 +156,19 @@ nav,
 nav ul {
 	width: 100%;
 	list-style: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 nav ul > li {
-	flex-basis: 24%;
+	-ms-flex-preferred-size: 24%;
+	    flex-basis: 24%;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 }
 
@@ -203,14 +217,22 @@ main {}
 }
 
 .service_title {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-bottom: 18px;
 }
 
 .service_title > p {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 0 30px;
 	color: white;
 	font-size: 18px;
@@ -270,6 +292,8 @@ footer > p > span {
 		position: absolute;
 		overflow: hidden;
 		height: 0px;
+		-webkit-transition: height .5s ease;
+		-o-transition: height .5s ease;
 		transition: height .5s ease;
 	}
 
@@ -278,11 +302,15 @@ footer > p > span {
 	}
 
 	nav ul {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 
 	nav ul > li {
-		flex-basis: 100%;
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
 	}
 	nav ul > li > a {
 		padding: 10px;
@@ -321,7 +349,10 @@ footer > p > span {
 
 @media screen and (max-width: 480px) {
 	.service_title {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 
 	.service_title > p {
